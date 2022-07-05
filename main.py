@@ -8,5 +8,5 @@ async def root():
 
 @app.post("/event_handler")
 async def handle(request: Request):
-    print(request.json())
+    print(await request.json())
     return {"status": "ok"}
